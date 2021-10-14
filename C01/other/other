@@ -1,0 +1,83 @@
+
+Allocation memoire
+
+Stack Allocation
+
+int		main()
+{
+	int		a;
+	int		b[10]
+	..
+	Sont des allocations memoires
+}
+
+.temporaire
+allouer puis desallouer automatiquement a la fin de l execution
+________________________________________________________________________________
+Heap Allocation
+
+La heap est alloue durant l executions d instruction 
+heap -> et une pile d espace memoire disponible aux programmeurs pour allouer 
+et desallouer
+
+IL y a trois categories 
+C est trois categories nous aide a prioritiser les data(Objects)
+...
+
+
+int	main()
+{
+	int	*ptr = new int[10];
+}
+
+________________________________________________________________________________
+
+Delete
+
+Delete a array
+
+int		main()
+{
+	int*	array = new int[10];
+
+	delete[] array;
+	return 0;
+}
+
+Delete un pointeur
+
+int		main()
+{
+	int*	p = NULL;
+	
+	delete ptr;
+	return 0;
+}
+
+Destructor
+
+HPP
+
+class S
+{
+	private :
+	  std::string	s;
+	  str::string	*a;
+	public :
+		void	Construct();
+		void	~Destruct();
+}
+
+
+void	S::Destruct()
+{
+	delete[] a;
+	delete[] this->s;
+}
+
+
+
+
+
+
+
