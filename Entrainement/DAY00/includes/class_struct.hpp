@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   initlist0.hpp                                      :+:      :+:    :+:   */
+/*   class_struct.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/13 14:51:25 by labintei          #+#    #+#             */
-/*   Updated: 2021/10/13 18:57:39 by labintei         ###   ########.fr       */
+/*   Created: 2021/10/14 17:11:41 by labintei          #+#    #+#             */
+/*   Updated: 2021/10/14 17:15:06 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INITLIST0_HPP
-#define INITLIST0_HPP
+#ifndef CLASS_STRUCT_HPP
+#define CLASS_STRUCT_HPP
 
-#include <iostream>
-
-class	Sample
+struct Sample
 {
-	public :
+	int	foo;
 
-	char	a1;
-	char	a2;
-	char	a3;
-	Sample(char p1, int p2, float p3);
+	Sample();
 	~Sample();
+
+	void	bar(void) const;
 };
 
 #endif
