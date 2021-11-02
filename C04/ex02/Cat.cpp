@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.cpp                                          :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 19:00:58 by labintei          #+#    #+#             */
-/*   Updated: 2021/11/02 19:35:28 by labintei         ###   ########.fr       */
+/*   Created: 2021/11/02 18:06:17 by labintei          #+#    #+#             */
+/*   Updated: 2021/11/02 19:26:42 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Brain.hpp"
-#include <iostream>
+#include "Cat.hpp"
 
-Brain::Brain(void)
+Cat::Cat(void): Animal::Animal("Cat")
 {
-	for(int j = 0; j < 100 ; j++)
-		this->ideas[j] = "...";
-	std::cout << "Brain created " << std::endl;
+	brain = new Brain();
 }
 
-Brain::~Brain(void)
+Cat::~Cat(void)
 {
-	std::cout << "Brain destruct " << std::endl;
+	delete	brain;
+	std::cout << "Destruct Cat " << std::endl;
 }
 
-void	Brain::set_ideas(std::string *id)
+void	Cat::makeSound(void) const
 {
-	for(int i = 0; i < 100; i++)
-		ideas[i] = (id)[i];
+	std::cout << this->_type << " : MIIIAAAAOOOOUUUUUUU" << std::endl;
 }

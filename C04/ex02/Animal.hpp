@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.cpp                                          :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 19:00:58 by labintei          #+#    #+#             */
-/*   Updated: 2021/11/02 19:35:28 by labintei         ###   ########.fr       */
+/*   Created: 2021/11/02 17:57:28 by labintei          #+#    #+#             */
+/*   Updated: 2021/11/02 19:44:47 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Brain.hpp"
+#ifndef		ANIMAL_HPP
+#define		ANIMAL_HPP
+
 #include <iostream>
+#include <string>
 
-Brain::Brain(void)
+class		Animal
 {
-	for(int j = 0; j < 100 ; j++)
-		this->ideas[j] = "...";
-	std::cout << "Brain created " << std::endl;
-}
+	public:
+		virtual ~Animal(void);
+		virtual	void	makeSound() const;
+		std::string		getType(void) const;
+	protected:
+		std::string		_type;
+		Animal(void);
+		Animal(std::string s);
 
-Brain::~Brain(void)
-{
-	std::cout << "Brain destruct " << std::endl;
-}
+};
 
-void	Brain::set_ideas(std::string *id)
-{
-	for(int i = 0; i < 100; i++)
-		ideas[i] = (id)[i];
-}
+#endif

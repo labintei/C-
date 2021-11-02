@@ -6,7 +6,7 @@
 #    By: labintei <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/09 15:22:59 by labintei          #+#    #+#              #
-#    Updated: 2021/11/02 19:36:26 by labintei         ###   ########.fr        #
+#    Updated: 2021/11/02 19:37:15 by labintei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CC		= clang++
 
 RM		= rm -fr
 
-NAME	= Brain
+NAME	= Polymorphism
 
 CFLAGS	= -Wall -Werror -Wextra
 

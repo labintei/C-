@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.cpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 19:00:58 by labintei          #+#    #+#             */
-/*   Updated: 2021/11/02 19:35:28 by labintei         ###   ########.fr       */
+/*   Created: 2021/11/02 19:11:04 by labintei          #+#    #+#             */
+/*   Updated: 2021/11/02 19:48:05 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Brain.hpp"
-#include <iostream>
+#include "Cat.hpp"
+#include "Dog.hpp"
+#include "Animal.hpp"
 
-Brain::Brain(void)
+int		main()
 {
-	for(int j = 0; j < 100 ; j++)
-		this->ideas[j] = "...";
-	std::cout << "Brain created " << std::endl;
-}
+	Dog			a;
+	Cat			c;
+	const		Animal* j = new Dog();
+	// Animal		a;
 
-Brain::~Brain(void)
-{
-	std::cout << "Brain destruct " << std::endl;
-}
+	a.makeSound();
+	c.makeSound();
+	j->makeSound();
 
-void	Brain::set_ideas(std::string *id)
-{
-	for(int i = 0; i < 100; i++)
-		ideas[i] = (id)[i];
+	delete j;
 }
