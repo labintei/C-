@@ -6,7 +6,7 @@
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 10:45:04 by labintei          #+#    #+#             */
-/*   Updated: 2021/10/13 11:12:32 by labintei         ###   ########.fr       */
+/*   Updated: 2021/10/30 20:07:56 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,19 @@
 #include <iostream>
 #include <string>
 
+
 class	Zombie
 {
 	private :
-		std::string name;
+		std::string _name;
 	public :
-		Zombie* newZombie(std::string name);
-		void randomChump(std::string name);
+		Zombie(std::string name);
+		~Zombie(void);
 		void announce();
-//		void ~delete_Z();
 };
+
+Zombie* newZombie(std::string name);
+void randomChump(std::string name);
+
 
 #endif

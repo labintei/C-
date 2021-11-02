@@ -6,11 +6,11 @@
 #    By: labintei <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/09 15:22:59 by labintei          #+#    #+#              #
-#    Updated: 2021/10/13 11:14:10 by labintei         ###   ########.fr        #
+#    Updated: 2021/10/30 20:52:04 by labintei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRCS	= main.cpp Zombie.cpp ZombieHorde.cpp
 
 OBJS 	= $(SRCS:.cpp=.o)
 
@@ -18,7 +18,7 @@ CC		= clang++
 
 RM		= rm -fr
 
-NAME	= BraiiiiiiinnnzzzZ
+NAME	= Moar_Brainz
 
 CFLAGS	= -Wall -Werror -Wextra
 

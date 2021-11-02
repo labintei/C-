@@ -6,7 +6,7 @@
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 11:10:38 by labintei          #+#    #+#             */
-/*   Updated: 2021/10/13 12:18:13 by labintei         ###   ########.fr       */
+/*   Updated: 2021/10/30 20:46:18 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 int		main()
 {
-	Zombie	*Zombie_Horde;
+	Zombie* a = new Zombie[5];
+	a = zombieHorde(5, "John");
 
-	.newZombie("Lauranne");
-	a.announce();
-	b.randomChump("Bintein");
-	
-	delete[] Zombie_Horde;
+	for(int j = 0; j < 5; j++)
+	{
+		a[j].announce();
+	}
+	delete[] a;
 	return 0;
 }

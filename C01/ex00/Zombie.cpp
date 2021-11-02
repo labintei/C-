@@ -6,7 +6,7 @@
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 10:53:20 by labintei          #+#    #+#             */
-/*   Updated: 2021/10/13 11:11:38 by labintei         ###   ########.fr       */
+/*   Updated: 2021/10/30 20:14:02 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	Zombie::announce()
 {
-	std::cout << this->name << " BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << this->_name << " BraiiiiiiinnnzzzZ..." << std::endl;
 }

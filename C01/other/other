@@ -9,7 +9,7 @@ int		main()
 	int		b[10]
 	..
 	Sont des allocations memoires
-}
+}?????
 
 .temporaire
 allouer puis desallouer automatiquement a la fin de l execution
@@ -76,6 +76,24 @@ void	S::Destruct()
 }
 
 
+AVANTAGE POINTEUR VS REFERENCE
+
+POINTEUR 
+
+peut etre initialiser avec n importe quelle valeur apres ca declaration
+Un pointeur peut etre initialize avec un pointeur NULL
+Un pointeur a besoin d etre dereference avec *
+Un pointeur peut etre changer pour pointer vers n importe quel variable du m type
+
+REFERENCE
+
+Une reference doit etre initialise quand elle est declare
+Reference ne peuvent etre NULL
+Une reference peut etre utilise simplenent par nom
+Une fois une reference initialize elle ne peut etre changer pour se referer a 
+une autre vairiable objets
+
+REVOIR EX05 pour voir si on peut faire autrement
 
 
 
