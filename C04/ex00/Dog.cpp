@@ -1,45 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   inheritance.cpp                                    :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/27 18:14:06 by labintei          #+#    #+#             */
-/*   Updated: 2021/11/02 12:57:40 by labintei         ###   ########.fr       */
+/*   Created: 2021/11/02 18:13:19 by labintei          #+#    #+#             */
+/*   Updated: 2021/11/02 18:42:24 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#include "Dog.hpp"
+#include "Animal.hpp"
 
-
-class		Cat
+Dog::Dog(void): Animal::Animal("Dog")
 {
-	private:
-		int		_n;
-	public:
-		Cat();
-		Cat(Cat const &);
-		Cat& operator=(Cat const &);
-		~Cat();
+}
 
-		void	run(int d);
-		void	s(std::string const & target);
-};
-
-class		Pony
+Dog::~Dog(void)
 {
-	private:
-		int		_n;
-	public:
-		Pony();
-		Pony(Pony const &);
-		Pony& operator=(Pony const &);
-		~Pony();
-		
-		void	run(int d);
-		void	doMagic(std::string const & target);
-};
+}
 
+void	Dog::makeSound(void) const
+{
+	std::cout << this->_type << " : WOOOUUFFUF WOOOUUUUFFFF" << std::endl;
+}
 

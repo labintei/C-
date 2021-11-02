@@ -1,45 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   inheritance.cpp                                    :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/27 18:14:06 by labintei          #+#    #+#             */
-/*   Updated: 2021/11/02 12:57:40 by labintei         ###   ########.fr       */
+/*   Created: 2021/11/02 11:08:47 by labintei          #+#    #+#             */
+/*   Updated: 2021/11/02 17:42:18 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef		CLAPTRAP_HPP
+#define		CLAPTRAP_HPP
+
 #include <iostream>
-#include <string>
 
-
-class		Cat
+class		ClapTrap
 {
-	private:
-		int		_n;
 	public:
-		Cat();
-		Cat(Cat const &);
-		Cat& operator=(Cat const &);
-		~Cat();
-
-		void	run(int d);
-		void	s(std::string const & target);
+		ClapTrap(std::string name);
+		ClapTrap(void);
+		~ClapTrap(void);
+		void	Setname(std::string s);
+		void	attack(std::string const & target);
+		void	takeDamage(unsigned int amount);
+		void	beRepaired(unsigned int amount);
+	protected:
+		std::string		_name;
+		int				_hitpoint;
+		int				_energy;
+		int				_attack;
 };
 
-class		Pony
-{
-	private:
-		int		_n;
-	public:
-		Pony();
-		Pony(Pony const &);
-		Pony& operator=(Pony const &);
-		~Pony();
-		
-		void	run(int d);
-		void	doMagic(std::string const & target);
-};
-
-
+#endif

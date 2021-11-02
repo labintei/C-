@@ -5,26 +5,37 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 09:29:27 by labintei          #+#    #+#             */
-/*   Updated: 2021/11/02 10:44:12 by labintei         ###   ########.fr       */
+/*   Created: 2021/11/02 11:09:01 by labintei          #+#    #+#             */
+/*   Updated: 2021/11/02 17:37:27 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
-int		main(void)
+int	main(void)
 {
-	Fixed			a;
-	Fixed const		b(Fixed(5.05f) * Fixed(2));
+//	ClapTrap	a("Lauranne");
+//	ScavTrap	b("Bintein");
+//	FragTrap	c("Cool guy");
+	DiamondTrap d("Monster");
 
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-
-	std::cout << b << std::endl;
-	std::cout << Fixed::max(a, b) << std::endl;
-
+	d.attack("Your life");
+	d.beRepaired(24);
+	d.highFiveGuys();
+	d.guardGate();
+	d.takeDamage(45);
+/*	a.attack("La mauvaise fois");
+	b.attack(" L es M e ch an tt ss ");
+	c.attack(" LES PLOUS BO");
+	c.beRepaired(12);
+	b.beRepaired(45);
+	b.guardGate();
+	a.takeDamage(5);
+	a.beRepaired(7);
+	c.highFiveGuys();
+*/
 	return 0;
 }

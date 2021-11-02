@@ -1,45 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   inheritance.cpp                                    :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/27 18:14:06 by labintei          #+#    #+#             */
-/*   Updated: 2021/11/02 12:57:40 by labintei         ###   ########.fr       */
+/*   Created: 2021/11/02 12:20:47 by labintei          #+#    #+#             */
+/*   Updated: 2021/11/02 17:33:25 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#ifndef		SCAVTRAP_HPP
+#define		SCAVTRAP_HPP
 
+#include "ClapTrap.hpp"
 
-class		Cat
+// DOIT COMMENCER PAR BUILD UN FLAGTRAP AVANT DE BUILD UN SCAVTRAP
+
+class	ScavTrap: virtual public ClapTrap
 {
-	private:
-		int		_n;
 	public:
-		Cat();
-		Cat(Cat const &);
-		Cat& operator=(Cat const &);
-		~Cat();
-
-		void	run(int d);
-		void	s(std::string const & target);
+		ScavTrap(std::string const & name);
+		ScavTrap(void);
+		~ScavTrap(void);
+		void	guardGate();
+	private:
+		bool	_guard;
 };
 
-class		Pony
-{
-	private:
-		int		_n;
-	public:
-		Pony();
-		Pony(Pony const &);
-		Pony& operator=(Pony const &);
-		~Pony();
-		
-		void	run(int d);
-		void	doMagic(std::string const & target);
-};
-
-
+#endif

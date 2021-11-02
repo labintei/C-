@@ -1,45 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   inheritance.cpp                                    :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/27 18:14:06 by labintei          #+#    #+#             */
-/*   Updated: 2021/11/02 12:57:40 by labintei         ###   ########.fr       */
+/*   Created: 2021/11/02 18:45:09 by labintei          #+#    #+#             */
+/*   Updated: 2021/11/02 19:14:32 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef		BRAIN_HPP
+#define		BRAIN_HPP
+
 #include <string>
+#include <iostream>
 
-
-class		Cat
+class		Brain
 {
-	private:
-		int		_n;
 	public:
-		Cat();
-		Cat(Cat const &);
-		Cat& operator=(Cat const &);
-		~Cat();
-
-		void	run(int d);
-		void	s(std::string const & target);
+		Brain(void);
+		virtual	~Brain(void);
+		void	set_ideas(std::string id);
+		std::string		ideas[100];
 };
 
-class		Pony
-{
-	private:
-		int		_n;
-	public:
-		Pony();
-		Pony(Pony const &);
-		Pony& operator=(Pony const &);
-		~Pony();
-		
-		void	run(int d);
-		void	doMagic(std::string const & target);
-};
-
-
+#endif

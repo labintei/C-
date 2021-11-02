@@ -1,45 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   inheritance.cpp                                    :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/27 18:14:06 by labintei          #+#    #+#             */
-/*   Updated: 2021/11/02 12:57:40 by labintei         ###   ########.fr       */
+/*   Created: 2021/11/02 19:00:58 by labintei          #+#    #+#             */
+/*   Updated: 2021/11/02 19:32:29 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Brain.hpp"
 #include <iostream>
-#include <string>
 
-
-class		Cat
+Brain::Brain(void)
 {
-	private:
-		int		_n;
-	public:
-		Cat();
-		Cat(Cat const &);
-		Cat& operator=(Cat const &);
-		~Cat();
+	for(int j = 0; j < 100 ; j++)
+		this->ideas[j] = "ideas";
+	std::cout << "Brain created " << std::endl;
+}
 
-		void	run(int d);
-		void	s(std::string const & target);
-};
-
-class		Pony
+Brain::~Brain(void)
 {
-	private:
-		int		_n;
-	public:
-		Pony();
-		Pony(Pony const &);
-		Pony& operator=(Pony const &);
-		~Pony();
-		
-		void	run(int d);
-		void	doMagic(std::string const & target);
-};
+	std::cout << "Brain destruct " << std::endl;
+}
 
-
+void	Brain::set_ideas(std::string id)
+{
+	for(int i = 0; i < 100; i++)
+		ideas[i] = id[i];
+}

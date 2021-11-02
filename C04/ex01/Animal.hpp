@@ -1,45 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   inheritance.cpp                                    :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/27 18:14:06 by labintei          #+#    #+#             */
-/*   Updated: 2021/11/02 12:57:40 by labintei         ###   ########.fr       */
+/*   Created: 2021/11/02 17:57:28 by labintei          #+#    #+#             */
+/*   Updated: 2021/11/02 19:31:55 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef		ANIMAL_HPP
+#define		ANIMAL_HPP
 
 #include <iostream>
 #include <string>
 
-
-class		Cat
+class		Animal
 {
-	private:
-		int		_n;
 	public:
-		Cat();
-		Cat(Cat const &);
-		Cat& operator=(Cat const &);
-		~Cat();
-
-		void	run(int d);
-		void	s(std::string const & target);
+		Animal(std::string s);
+		Animal(void);
+		virtual ~Animal(void);
+		virtual	void	makeSound() const;
+		std::string		getType(void) const;
+	protected:
+		std::string		_type;
 };
 
-class		Pony
-{
-	private:
-		int		_n;
-	public:
-		Pony();
-		Pony(Pony const &);
-		Pony& operator=(Pony const &);
-		~Pony();
-		
-		void	run(int d);
-		void	doMagic(std::string const & target);
-};
-
-
+#endif
