@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 21:29:20 by labintei          #+#    #+#             */
-/*   Updated: 2021/11/04 12:23:28 by labintei         ###   ########.fr       */
+/*   Created: 2021/11/04 11:38:56 by labintei          #+#    #+#             */
+/*   Updated: 2021/11/04 12:35:40 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMATERIA_HPP
-#define AMATERIA_HPP
+#include "Cure.hpp"
 
-#include <iostream>
-#include <string>
-#include <iomanip>
-#include "ICharacter.hpp"
-
-class		AMateria
+Cure::Cure(void): AMateria("cure")
 {
-	protected:
-		std::string		type;
-	public:
-		AMateria(std::string const & type);
-		std::string const & getType() const; // Returns the materia type
-		virtual AMateria* clone() const = 0;
-		virtual void use(ICharacter& target);
-};
+}
 
-#endif
+Cure::~Cure(void)
+{
+}
+
+CUre	Cure::use(ICharacter *target)
+{
+	std::cout << "* heals " << target.getName() << " wounds*"  << std::endl;
+}
