@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 11:39:15 by labintei          #+#    #+#             */
-/*   Updated: 2021/11/15 21:18:39 by labintei         ###   ########.fr       */
+/*   Created: 2021/11/16 12:51:38 by labintei          #+#    #+#             */
+/*   Updated: 2021/11/16 15:48:58 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef		ICE_HPP
-#define		ICE_HPP
+#ifndef ROBOTOMYREQUESTFORM_HPP
+#define	ROBOTOMYREQUESTFORM_HPP
 
-#include "AMateria.hpp"
+#include "Form.hpp"
 
-//template< typename ice = Ice >
 
-class		Ice : public AMateria
+class	RobotomyRequestForm : public Form
 {
-	public:
-		Ice();
-		Ice(Ice const & rhs);
-		~Ice(void);
-		void		use(ICharacter& target);
-		AMateria*	clone() const;
+	public :
+		RobotomyRequestForm(std::string target);
+		~RobotomyRequestForm();
+		void	execute(Bureaucrat const & executor) const;
+	private :
+		std::string	_target;
 };
-
-
-
 
 #endif

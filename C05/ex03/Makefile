@@ -6,11 +6,12 @@
 #    By: labintei <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/09 15:22:59 by labintei          #+#    #+#              #
-#    Updated: 2021/11/15 21:37:45 by labintei         ###   ########.fr        #
+#    Updated: 2021/11/16 18:50:19 by labintei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
+SRCS	= main.cpp Bureaucrat.cpp Form.cpp PresidentialPardonForm.cpp \
+		RobotomyRequestForm.cpp ShrubberryCreationForm.cpp Intern.cpp
 
 OBJS 	= $(SRCS:.cpp=.o)
 
@@ -18,7 +19,7 @@ CC		= clang++
 
 RM		= rm -fr
 
-NAME	= Interface
+NAME	= Coffee
 
 CFLAGS	= -Wall -Werror -Wextra
 

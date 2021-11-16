@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 11:39:15 by labintei          #+#    #+#             */
-/*   Updated: 2021/11/15 21:18:39 by labintei         ###   ########.fr       */
+/*   Created: 2021/11/16 18:21:18 by labintei          #+#    #+#             */
+/*   Updated: 2021/11/16 18:38:52 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef		ICE_HPP
-#define		ICE_HPP
+#ifndef		INTERN_HPP
+#define		INTERN_HPP
 
-#include "AMateria.hpp"
+#include "Form.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberryCreationForm.hpp"
 
-//template< typename ice = Ice >
-
-class		Ice : public AMateria
+class	Intern
 {
-	public:
-		Ice();
-		Ice(Ice const & rhs);
-		~Ice(void);
-		void		use(ICharacter& target);
-		AMateria*	clone() const;
+	public :
+	Intern();
+	~Intern();
+	Form*	makeForm(std::string form, std::string target);
 };
-
-
-
 
 #endif

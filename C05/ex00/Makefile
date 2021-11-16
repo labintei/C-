@@ -6,11 +6,11 @@
 #    By: labintei <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/09 15:22:59 by labintei          #+#    #+#              #
-#    Updated: 2021/11/02 21:58:04 by labintei         ###   ########.fr        #
+#    Updated: 2021/11/15 21:55:06 by labintei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= main.cpp Cat.cpp Dog.cpp Animal.cpp
+SRCS	= main.cpp Bureaucrat.cpp
 
 OBJS 	= $(SRCS:.cpp=.o)
 
@@ -18,7 +18,7 @@ CC		= clang++
 
 RM		= rm -fr
 
-NAME	= Bureaucrate
+NAME	= Bureaucrat
 
 CFLAGS	= -Wall -Werror -Wextra
 

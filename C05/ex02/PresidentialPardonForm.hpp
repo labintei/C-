@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 11:39:15 by labintei          #+#    #+#             */
-/*   Updated: 2021/11/15 21:18:39 by labintei         ###   ########.fr       */
+/*   Created: 2021/11/16 12:58:53 by labintei          #+#    #+#             */
+/*   Updated: 2021/11/16 15:01:45 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef		ICE_HPP
-#define		ICE_HPP
+#ifndef		PRESIDENTIALPARDONFORM_HPP
+#define		PRESIDENTIALPARDONFORM_HPP
 
-#include "AMateria.hpp"
+#include "Form.hpp"
 
-//template< typename ice = Ice >
-
-class		Ice : public AMateria
+class	PresidentialPardonForm : public Form
 {
-	public:
-		Ice();
-		Ice(Ice const & rhs);
-		~Ice(void);
-		void		use(ICharacter& target);
-		AMateria*	clone() const;
+	public :
+		PresidentialPardonForm(std::string target);
+		~PresidentialPardonForm();
+		void	execute(Bureaucrat const & executor) const;
+	private :
+		std::string	_target;
 };
-
-
-
 
 #endif

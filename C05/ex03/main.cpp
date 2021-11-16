@@ -5,41 +5,38 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 21:47:41 by labintei          #+#    #+#             */
-/*   Updated: 2021/11/15 16:52:54 by labintei         ###   ########.fr       */
+/*   Created: 2021/11/15 22:19:09 by labintei          #+#    #+#             */
+/*   Updated: 2021/11/16 19:00:15 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
-#include "IMateriaSource.hpp"
-#include "MateriaSource.hpp"
-#include "Ice.hpp"
-#include "Cure.hpp"
-#include "ICharacter.hpp"
-#include "Character.hpp"
+#include "Bureaucrat.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberryCreationForm.hpp"
+#include "Intern.hpp"
 
-int		main()
+int		main(void)
 {
-	IMateriaSource* src = new MateriaSource();
-	src->learnMateria(new Ice());
-	src->learnMateria(new Cure());
 
-	ICharacter* me = new Character("me");
+	Intern	I;
+	Bureaucrat	F("Emmanuel", 1);
+	Form*	a;
+	Form*	b;
+	Form*	c;
+	Form*	d;
 
-	AMateria* tmp;
-	tmp = src->createMateria("ice");
-	me->equip(tmp);
-	tmp = src->createMateria("cure");
-	me->equip(tmp);
+	a = I.makeForm("robotomy request", "Bender");
+	b = I.makeForm("presidential pardon", "Macron");
+	c = I.makeForm("shrubberry creation", "Sapin");
+	d = I.makeForm("fefjiorjioergji", "Opps");
 
-	ICharacter* bob = new Character("bob");
+	F.signForm(*a);
+	F.signForm(*b);
+	F.signForm(*c);
 
-	me->use(0, *bob);
-	me->use(1, *bob);
-
-	delete bob;
-	delete me;
-	delete src;
-
+	F.executeForm(*a);
+	F.executeForm(*b);
+	F.executeForm(*c);
 	return 0;
 }

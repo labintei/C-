@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 11:34:52 by labintei          #+#    #+#             */
-/*   Updated: 2021/11/15 21:17:32 by labintei         ###   ########.fr       */
+/*   Created: 2021/11/15 15:32:33 by labintei          #+#    #+#             */
+/*   Updated: 2021/11/15 19:32:25 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef		CURE_HPP
-#define		CURE_HPP
+#ifndef		CHARACTER_HPP
+#define		CHARACTER_HPP
 
+#include "ICharacter.hpp"
 #include "AMateria.hpp"
 
-// LEUR TYPE SERA NOMME EN MINUSCULE cure->type
-//
-// REGARDER entraienment C07 pour utilisation des templates
-
-//template< typename cure = Cure>
-
-class		Cure : public AMateria
+class	Character : public ICharacter
 {
 	public:
-		Cure(void);
-		Cure(Cure const &rhs);
-		// PEUT ETRE LE FAIRE AVEC un const Cure const rhs
-		// Ou avec un poerateur =
-		// Renvoyer un clone AMateria* clone() const 
-		~Cure(void);
-		void	use(ICharacter& target);
-		AMateria* clone()const;
+		// EMPTY OU PAS
+		Character();
+		Character(std::string const name);
+		~Character();
+		Character & operator=(Character const & rhs);
+		std::string const & getName() const;
+		void	equip(AMateria* m);
+		void	unequip(int idx);
+		void	use(int idx, ICharacter& target);
+
+	protected:
+		AMateria*		_materia[4];
+		std::string		_name;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 11:38:56 by labintei          #+#    #+#             */
-/*   Updated: 2021/11/04 12:35:40 by labintei         ###   ########.fr       */
+/*   Updated: 2021/11/15 21:36:12 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,21 @@ Cure::Cure(void): AMateria("cure")
 {
 }
 
+Cure::Cure(Cure const &rhs)
+{
+	*this = rhs;
+}
+
 Cure::~Cure(void)
 {
 }
 
-CUre	Cure::use(ICharacter *target)
+void	Cure::use(ICharacter& target)
 {
-	std::cout << "* heals " << target.getName() << " wounds*"  << std::endl;
+	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
+}
+
+AMateria*	Cure::clone() const
+{
+	return new Cure();
 }

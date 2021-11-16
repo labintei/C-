@@ -6,7 +6,7 @@
 /*   By: labintei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 21:59:28 by labintei          #+#    #+#             */
-/*   Updated: 2021/11/15 23:39:39 by labintei         ###   ########.fr       */
+/*   Updated: 2021/11/16 18:11:25 by labintei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 #include <iostream>
 #include <string>
 #include <stdexcept>
+#include "Form.hpp"
+
+class	Form;
 
 class	Bureaucrat
 {
@@ -43,6 +46,8 @@ class	Bureaucrat
 		int						getGrade(void) const;
 		Bureaucrat & operator++(void);
 		Bureaucrat & operator--(void);
+		void	signForm(Form &form);
+		void	executeForm(Form const &form);
 	private :
 		std::string		_name;
 		int				_grade;
